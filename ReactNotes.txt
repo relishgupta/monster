@@ -1,0 +1,39 @@
+*Create React App
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+*In class component, React renders on mount and re-renders 1)When set state is called
+                                                           2)When props are updated
+*setState does a shallow merge
+*Lifecycle methods: componentDidMount, componentDidUpdate, componentDidUnmount
+
+*In functinal component, React render after the whole function gets executed from top to bottom and re-renders when 
+state is changed or props are changed and run the whole function again
+ NOTE: React does not re-renders meaning that the function will not run again from top to bottom if the initial 
+ string value of our state is same as the new string value coming in
+
+*The function which is not assigned to a variable is called anonymous function
+
+*How to insert more than one class names inside a className- by interpolation
+E.g-- className={`another_class ${this.props.one_class}`}
+
+*Functional components do not contain lifecycle methods. They use hooks instead.
+*useState() is used  instead of setState(). It gives us back an array of 2 values, Value and setValue
+e.g, const [value,setValue]=useState();
+*The Effect Hook lets you perform side effects in function components. Data fetching, setting up a subscription, and
+manually changing the DOM in React components are all examples of side effects. useState() is used  instead of 
+lifecycle methods. useEffect takes 2 arguments, first is a callback function and second is an array of dependencies,
+and by dependencies, these are most likely going to be state values or prop values(arguments that get passed in as 
+props to our functional component). This array says that whenever any of the values inside of this dependency array
+change is when this callback function will run
+e.g,useEffect(()=>{},[])
+
+*Impure functions: If a function is to modify or rely on something outside of its scope and beyond the parameters 
+being passed into it, then it is an impure function
+
+*Pure functions: If a function does not modify or rely on something outside of its scope and beyond the parameters 
+being passed into it, then it is an pure function
+
+*If there is an implicit return then the body of that function is enclosed between () otherwise {}
+
