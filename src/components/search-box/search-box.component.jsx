@@ -1,6 +1,6 @@
 //Using class component
 
-import { Component} from "react";
+import React,{ Component} from "react";
 import './search-box.css';
 class SearchBox extends Component{
     render(){

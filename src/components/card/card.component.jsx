@@ -1,6 +1,6 @@
 //Using class component
 
-import { Component } from "react";
+import React,{ Component } from "react";
 import './cards.style.css';
 
 class Card extends Component{
@@ -9,13 +9,12 @@ class Card extends Component{
         return(
             <div className="card-container" key={id}>
                     <img 
-                    alt={`monster ${name}`}
-                    src={`https://robohash.org/${id}?set=set2&size=180x180`}
+                        alt={`monster ${name}`}
+                        src={`https://robohash.org/${id}?set=set2&size=180x180`}
                     />
                     <h2>{name}</h2>
                     <p>{email}</p>
-
-                </div>
+            </div>
         )
     }
 }
